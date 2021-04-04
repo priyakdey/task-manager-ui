@@ -25,7 +25,7 @@ function Login(props) {
         const users = data.users.filter(user => user.username === username && user.password === password);
         if (users.length !== 0) {
             setLoginFailed(false);
-            console.log(props.history.push("/tasks"));
+            props.history.push("/tasks");
         }
         else {
             setLoginFailed(true);
